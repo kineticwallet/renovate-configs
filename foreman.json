@@ -1,0 +1,25 @@
+{
+	"extends": [
+		"config:recommended"
+	],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"^foreman.toml$"
+			],
+			"matchStrings": [
+				".+ = { name = \"(?<depName>.+)\", version = \"(?<currentValue>.+)\" }"
+			],
+			"datasourceTemplate": "github-releases"
+		}
+	],
+	"packageRules": [
+		{
+			"matchFileNames": [
+				"foreman.toml"
+			],
+			"extractVersion": "^v?(?<version>.*)$"
+		}
+	]
+}

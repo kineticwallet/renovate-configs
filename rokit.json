@@ -1,0 +1,30 @@
+{
+	"extends": [
+		"config:recommended"
+	],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"^aftman.toml$",
+				"^foreman.toml$",
+				"^rokit.toml$"
+			],
+			"matchStrings": [
+				".+ = { name = \"(?<depName>.+)\", version = \"(?<currentValue>.+)\" }",
+				".+ = \"(?<depName>.+)@(?<currentValue>.+)\""
+			],
+			"datasourceTemplate": "github-releases"
+		}
+	],
+	"packageRules": [
+		{
+			"matchFileNames": [
+				"aftman.toml",
+				"foreman.toml",
+				"rokit.toml"
+			],
+			"extractVersion": "^v?(?<version>.*)$"
+		}
+	]
+}
