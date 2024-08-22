@@ -16,10 +16,10 @@ jobs:
         config_file: [renovate.json, aftman.json, foreman.json, rokit.json, roblox-ts.json]
     steps:
       - uses: actions/checkout@v4.1.7
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@v4.0.2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm
-      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.0
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
           config_file_path: ${{ matrix.config_file }}
