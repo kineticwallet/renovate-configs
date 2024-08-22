@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        config_file: [renovate.json, aftman.json, foreman.json, rokit.json]
+        config_file: [renovate.json, aftman.json, foreman.json, rokit.json, roblox-ts.json]
     steps:
       - uses: actions/checkout@v4.1.7
       - uses: actions/cache@v4.0.0

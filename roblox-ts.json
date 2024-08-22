@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"config:recommended",
+		"npm:unpublishSafe"
+	],
+	"packageRules": [
+		{
+			"groupName": "roblox-ts",
+			"matchPackageNames": [
+				"roblox-ts",
+				"@rbxts/compiler-types"
+			]
+		}
+	]
+}
