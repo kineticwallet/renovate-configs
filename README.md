@@ -5,7 +5,7 @@
 - Look at the source of each config to see what they do!
 - If you found a bug or want to extend the list of configs, simply create an *issue* or a *pull-request*!
 
-## List Of Configs
+## List Of Configs (A-Z)
 | **NAME** | **LINK** |
 |:---------|:---------|
 | `aftman` | `"github>kineticwallet/renovate-configs:aftman"` |
