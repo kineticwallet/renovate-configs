@@ -1,13 +1,13 @@
 {
 	"extends": [
-		"config:recommended"
+		"config:recommended",
+		"github>kineticwallet/renovate-configs:aftman",
+		"github>kineticwallet/renovate-configs:foreman"
 	],
 	"customManagers": [
 		{
 			"customType": "regex",
 			"fileMatch": [
-				"^aftman.toml$",
-				"^foreman.toml$",
 				"^rokit.toml$"
 			],
 			"matchStrings": [
@@ -20,8 +20,6 @@
 	"packageRules": [
 		{
 			"matchFileNames": [
-				"aftman.toml",
-				"foreman.toml",
 				"rokit.toml"
 			],
 			"extractVersion": "^v?(?<version>.*)$"
