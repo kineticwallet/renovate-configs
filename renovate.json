@@ -1,6 +1,7 @@
 {
 	"extends": [
-		"config:recommended"
+		"config:recommended",
+		"github>kineticwallet/renovate-configs:rokit"
 	],
 	"automerge": true,
 	"major": {
