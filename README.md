@@ -4,7 +4,7 @@
 - A collection of shareable renovate configs.
 - Look at the source of each config to see what they do!
 
-## Configs
+## List Of Configs
 | **NAME** | **LINK** |
 |:---------|:---------|
 | `aftman` | `"github>kineticwallet/renovate-configs:aftman"` |
