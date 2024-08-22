@@ -20,6 +20,6 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm
-      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.0
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
           config_file_path: ${{ matrix.config_file }}
