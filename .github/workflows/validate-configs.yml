@@ -11,6 +11,9 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config_file: [renovate.json, aftman.json, foreman.json, rokit.json]
     steps:
       - uses: actions/checkout@v4.1.7
       - uses: actions/cache@v4.0.0
@@ -19,4 +22,4 @@ jobs:
           key: ${{ runner.os }}-npm
       - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.0
         with:
-          config_file_path: renovate.json aftman.json foreman.json rokit.json
+          config_file_path: ${{ matrix.config_file }}
