@@ -3,7 +3,7 @@
 ## Description
 - A collection of shareable renovate configs.
 - Look at the source of each config to see what they do!
-- If you found a bug or want to extend the list of configs, simply create a *issue* or *pull-request*!
+- If you found a bug or want to extend the list of configs, simply create an *issue* or a *pull-request*!
 
 ## List Of Configs
 | **NAME** | **LINK** |
