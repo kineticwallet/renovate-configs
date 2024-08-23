@@ -23,7 +23,7 @@ jobs:
       - uses: actions/cache@v4.0.2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm
+          key: ${{ runner.os }}-node
       - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
           config_file_path: ${{ matrix.config_file }}
