@@ -5,12 +5,14 @@ on:
     branches:
       - master
     paths:
-      - /*.json
+      - "*.json"
+      - "!*/**/*.json"
   push:
     branches:
       - master
     paths:
-      - /*.json
+      - "*.json"
+      - "!*/**/*.json"
 
 jobs:
   validate:
@@ -18,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        config_file: [aftman.json, foreman.json, renovate.json, roblox-ts.json, rokit.json]
+        config_name: [aftman.json, foreman.json, renovate.json, roblox-ts.json, rokit.json]
       fail-fast: false
     steps:
       - name: Checkout repository.
@@ -28,7 +30,7 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm
-      - name: Validate "${{ matrix.config_file }}" config.
+      - name: Validate "${{ matrix.config_name }}" config.
         uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
-          config_file_path: ${{ matrix.config_file }}
+          config_file_path: ${{ matrix.config_name }}
