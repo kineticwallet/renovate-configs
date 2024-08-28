@@ -1,6 +1,7 @@
 {
 	"extends": [
 		"config:recommended",
+		":ignoreUnstable",
 		"npm:unpublishSafe"
 	],
 	"packageRules": [
@@ -9,8 +10,7 @@
 			"matchPackageNames": [
 				"roblox-ts",
 				"@rbxts/compiler-types"
-			],
-			"ignoreUnstable": true
+			]
 		}
 	]
 }
