@@ -13,5 +13,26 @@
 | `roblox-ts` | `"github>kineticwallet/renovate-configs:roblox-ts"` |
 | `rokit` | `"github>kineticwallet/renovate-configs:rokit"` |
 
+## Example
+A `renovate.json` config **example** utilizing a few of these  shared configs.
+```json
+{
+	"extends": [
+		"config:recommended",
+		":pinAllExceptPeerDependencies",
+		"github>kineticwallet/renovate-config-rokit",
+		"github>kineticwallet/renovate-config-roblox-ts",
+		"npm:unpublishSafe"
+	],
+	"packageRules": [
+		{
+			"matchPackageNames": ["@rbxts/types"],
+			"automerge": true,
+			"minimumReleaseAge": "0 days"
+		}
+	]
+}
+```
+
 ## Further Information
 - This *repository* is licensed under the **MIT** license!
