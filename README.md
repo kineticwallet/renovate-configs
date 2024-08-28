@@ -20,8 +20,8 @@ A `renovate.json` config **example** utilizing a few shared configs & more.
 	"extends": [
 		"config:recommended",
 		":pinAllExceptPeerDependencies",
-		"github>kineticwallet/renovate-configs-rokit",
-		"github>kineticwallet/renovate-configs-roblox-ts",
+		"github>kineticwallet/renovate-configs:rokit",
+		"github>kineticwallet/renovate-configs:roblox-ts",
 		"npm:unpublishSafe"
 	],
 	"packageRules": [
