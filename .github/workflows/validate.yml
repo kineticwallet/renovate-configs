@@ -17,13 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        config_file: [renovate.json, aftman.json, foreman.json, rokit.json, roblox-ts.json]
+        config_file: [aftman.json, foreman.json, renovate.json, roblox-ts.json, rokit.json]
     steps:
-      - uses: actions/checkout@v4.1.7
-      - uses: actions/cache@v4.0.2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node
-      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
+      - name: Checkout repository.
+        uses: actions/checkout@v4.1.7
+      - name: Validate "${{ matrix.config_file }}" config.
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
           config_file_path: ${{ matrix.config_file }}
