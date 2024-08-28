@@ -14,10 +14,12 @@ on:
 
 jobs:
   validate:
+    name: Validate
     runs-on: ubuntu-latest
     strategy:
       matrix:
         config_file: [aftman.json, foreman.json, renovate.json, roblox-ts.json, rokit.json]
+      fail-fast: false
     steps:
       - name: Checkout repository.
         uses: actions/checkout@v4.1.7
