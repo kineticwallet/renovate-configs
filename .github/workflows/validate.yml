@@ -9,8 +9,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - ./*.json
 
 jobs:
   validate:
@@ -23,6 +21,11 @@ jobs:
     steps:
       - name: Checkout repository.
         uses: actions/checkout@v4.1.7
+      - name: Cache validator dependencies.
+        uses: actions/cache@v4.0.2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm
       - name: Validate "${{ matrix.config_file }}" config.
         uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
