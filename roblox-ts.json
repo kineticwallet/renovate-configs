@@ -9,7 +9,8 @@
 			"matchPackageNames": [
 				"roblox-ts",
 				"@rbxts/compiler-types"
-			]
+			],
+			"ignoreUnstable": true
 		}
 	]
 }
