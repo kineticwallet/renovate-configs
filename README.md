@@ -14,7 +14,7 @@
 | `rokit` | `"github>kineticwallet/renovate-configs:rokit"` |
 
 ## Example
-A `renovate.json` config **example** utilizing a few shared configs.
+A `renovate.json` config **example** utilizing a few shared configs & more.
 ```json
 {
 	"extends": [
