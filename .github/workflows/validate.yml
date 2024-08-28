@@ -5,10 +5,12 @@ on:
     branches:
       - master
     paths:
-      - ./*.json
+      - /*.json
   push:
     branches:
       - master
+    paths:
+      - /*.json
 
 jobs:
   validate:
