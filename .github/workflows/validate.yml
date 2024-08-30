@@ -36,6 +36,6 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-npm
       - name: Validate "${{ matrix.config_name }}" config.
-        uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.1.0
         with:
           config_file_path: ${{ matrix.config_name }}
